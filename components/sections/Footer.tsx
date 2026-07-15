@@ -16,7 +16,7 @@ export function Footer() {
               эффективной работы вашего бизнеса.
             </p>
             <div className="footer-social">
-              <a href="#" aria-label="Telegram">
+              {/* <a href="#" aria-label="Telegram">
                 <Send />
               </a>
               <a href="#" aria-label="Instagram">
@@ -24,8 +24,8 @@ export function Footer() {
               </a>
               <a href="#" aria-label="YouTube">
                 <Youtube />
-              </a>
-              <a href="#" aria-label="Email">
+              </a> */}
+              <a href="mailto:support@prime-shop.by" aria-label="Email">
                 <Mail />
               </a>
             </div>
@@ -33,7 +33,7 @@ export function Footer() {
           <div className="footer-col">
             <h5>Контакты</h5>
             <ul>
-              <li>www.prime-shop.by</li>
+              <li>support@prime-shop.by</li>
               <li>+375 (44) 743-41-81</li>
             </ul>
           </div>
