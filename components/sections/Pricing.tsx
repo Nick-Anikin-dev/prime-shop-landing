@@ -27,10 +27,10 @@ const PLANS: Plan[] = [
     ctaVariant: "soft",
     featsHead: "Входит",
     feats: [
-      { text: "1 магазин · до 50 товаров" },
+      { text: "1 магазин · до 30 товаров" },
       { text: "Каталог товаров" },
       { text: "Движение товаров и денег" },
-      { text: "Базовые документы" },
+      { text: "Базовые документы", off: true },
       { text: "Сотрудники и роли", off: true },
       { text: "Аналитика и отчёты", off: true },
       { text: "Интеграции", off: true },
@@ -45,7 +45,7 @@ const PLANS: Plan[] = [
     ctaVariant: "primary",
     featsHead: "Всё из бесплатного, плюс",
     feats: [
-      { text: "До 3 магазинов · до 10 сотрудников" },
+      { text: "До 3 магазинов · до 8 сотрудников" },
       { text: "Клиенты (CRM) и поставщики" },
       { text: "Отчёты, аналитика, экспорт в Excel" },
       { text: "Печать и шаблоны чеков" },
@@ -179,7 +179,7 @@ export function Pricing() {
 
         <SectionReveal className="pricing-foot">
           <a href={CRM_SIGN_UP} className="link-arrow">
-            Попробовать 14 дней бесплатно <ArrowRight style={{ width: 18, height: 18 }} />
+            Попробовать 30 дней бесплатно <ArrowRight style={{ width: 18, height: 18 }} />
           </a>
         </SectionReveal>
       </div>

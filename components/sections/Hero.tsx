@@ -90,7 +90,7 @@ export function Hero() {
               </Button>
             </motion.div>
             <motion.p className="hero-note" variants={item}>
-              <CheckCircle2 /> 14 дней бесплатно · Не требуется кредитная карта
+              <CheckCircle2 /> 30 дней бесплатно
             </motion.p>
           </motion.div>
 

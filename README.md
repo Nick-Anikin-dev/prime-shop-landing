@@ -17,12 +17,25 @@ npm run dev
 
 Откройте http://localhost:3000
 
-Сборка продакшена:
+Сборка продакшена (static export):
 
 ```bash
 npm run build
-npm start
+# артефакты в out/
 ```
+
+Docker-образ и деплой — через GitHub Actions (`.github/workflows/deploy.yml`).
+
+Репозиторий: https://github.com/Nick-Anikin-dev/prime-shop-landing
+
+Production: https://prime-shop.by (CRM — https://prime-shop.by/crm)
+
+### CI/CD secrets (Settings → Secrets → Actions)
+
+Скопируйте из репозиториев frontend/backend:
+
+- `VPS_HOST`, `VPS_USER`, `PRIME_SHOP_SSH_KEY`
+- `GHCR_USER`, `GHCR_PAT`
 
 ## Структура
 

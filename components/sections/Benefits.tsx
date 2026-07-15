@@ -6,7 +6,7 @@ import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 
 const BENEFITS: { icon: LucideIcon; text: string }[] = [
   { icon: Globe, text: "Работает в браузере — на ПК, планшете и телефоне" },
-  { icon: UserCheck, text: "Роли: владелец, управляющий, кассир, кладовщик" },
+  { icon: UserCheck, text: "Роли: создавайте роли и гибко назначайте права доступа" },
   { icon: FileText, text: "Готовые отчёты по продажам и финансам" },
   { icon: Receipt, text: "Шаблоны чеков с вашим логотипом" },
 ];

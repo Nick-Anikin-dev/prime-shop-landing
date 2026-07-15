@@ -33,8 +33,8 @@ export function Footer() {
           <div className="footer-col">
             <h5>Контакты</h5>
             <ul>
-              <li>info@primeshop.io</li>
-              <li>+375 (29) 123-45-67</li>
+              <li>www.prime-shop.by</li>
+              <li>+375 (44) 743-41-81</li>
             </ul>
           </div>
           <div className="footer-col">
