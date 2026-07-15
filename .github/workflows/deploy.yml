@@ -41,6 +41,26 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
+      - name: Validate deploy secrets
+        run: |
+          missing=0
+          for name in VPS_HOST VPS_USER PRIME_SHOP_SSH_KEY GHCR_USER GHCR_PAT; do
+            if [ -z "${!name}" ]; then
+              echo "::error::Missing repository secret: $name"
+              missing=1
+            fi
+          done
+          if [ "$missing" -ne 0 ]; then
+            echo "::error::Add deploy secrets in Settings → Secrets and variables → Actions (copy from prime-shop-frontend repo)."
+            exit 1
+          fi
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_USER: ${{ secrets.VPS_USER }}
+          PRIME_SHOP_SSH_KEY: ${{ secrets.PRIME_SHOP_SSH_KEY }}
+          GHCR_USER: ${{ secrets.GHCR_USER }}
+          GHCR_PAT: ${{ secrets.GHCR_PAT }}
+
       - name: Rolling update on VPS
         uses: appleboy/ssh-action@v1.2.0
         env:
