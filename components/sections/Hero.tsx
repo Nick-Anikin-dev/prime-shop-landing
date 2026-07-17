@@ -71,15 +71,15 @@ export function Hero() {
             animate="show"
           >
             <motion.span className="pill" variants={item}>
-              <Sparkles /> Управляйте магазином эффективно
+              <Sparkles /> Учёт для розницы в Беларуси
             </motion.span>
             <motion.h1 variants={item}>
-              Готовый учёт для розницы.{" "}
+              Программа учёта для розничного магазина.{" "}
               <span className="accent">Всё в одном окне</span>
             </motion.h1>
             <motion.p className="hero-sub" variants={item}>
-              Онлайн-касса, товары, склад, аналитика и отчёты — всё, что нужно
-              для вашего магазина. Работает в браузере, без установки.
+              Онлайн-касса, товары, склад, аналитика и отчёты — в браузере, без
+              установки. Бесплатный старт, цены в BYN.
             </motion.p>
             <motion.div className="hero-actions" variants={item}>
               <Button href="#pricing" size="lg">
