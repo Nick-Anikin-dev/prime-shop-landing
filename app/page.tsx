@@ -7,11 +7,14 @@ import { Benefits } from "@/components/sections/Benefits";
 import { Pricing } from "@/components/sections/Pricing";
 import { Faq } from "@/components/sections/Faq";
 import { Cta } from "@/components/sections/Cta";
+import { SeoContent } from "@/components/sections/SeoContent";
 import { Footer } from "@/components/sections/Footer";
+import { JsonLd, faqPageJsonLd } from "@/components/JsonLd";
 
 export default function Home() {
   return (
     <>
+      <JsonLd data={faqPageJsonLd()} />
       <Navbar />
       <main>
         <Hero />
@@ -22,6 +25,7 @@ export default function Home() {
         <Pricing />
         <Faq />
         <Cta />
+        <SeoContent />
       </main>
       <Footer />
     </>

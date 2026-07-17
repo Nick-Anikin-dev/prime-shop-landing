@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { YandexMetrika } from "@/components/YandexMetrika";
+import {
+  JsonLd,
+  organizationJsonLd,
+  softwareApplicationJsonLd,
+} from "@/components/JsonLd";
 import "./globals.css";
 
 const inter = Inter({
@@ -50,6 +55,8 @@ export default function RootLayout({
   return (
     <html lang="ru" className={inter.variable}>
       <body style={{ fontFamily: "var(--font-inter), system-ui, sans-serif" }}>
+        <JsonLd data={organizationJsonLd()} />
+        <JsonLd data={softwareApplicationJsonLd()} />
         {gaMeasurementId ? (
           <GoogleAnalytics measurementId={gaMeasurementId} />
         ) : null}
