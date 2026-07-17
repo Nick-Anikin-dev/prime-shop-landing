@@ -22,6 +22,7 @@ export function organizationJsonLd() {
     url: LEGAL.site,
     email: LEGAL.email,
     telephone: LEGAL.phone,
+    logo: `${LEGAL.site}/img/android-chrome-192x192.png`,
     description:
       "Облачная программа учёта для розничного магазина в Беларуси: касса, товары, склад и аналитика.",
     founder: {
