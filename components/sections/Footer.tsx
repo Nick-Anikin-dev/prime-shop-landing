@@ -39,13 +39,12 @@ export function Footer() {
           </div>
           <div className="footer-col">
             <h5>Документы</h5>
-            <a href="#">Политика конфиденциальности</a>
-            <a href="#">Публичная оферта</a>
-            <a href="#">Договор оферты</a>
+            <a href="/privacy">Политика конфиденциальности</a>
+            <a href="/offer">Публичная оферта</a>
           </div>
         </div>
         <div className="footer-bottom">
-          © 2026 Prime Shop. Все права защищены.
+          © 2026 Prime Shop · ИП Аникин Николай · УНП 491733507
         </div>
       </div>
     </footer>
