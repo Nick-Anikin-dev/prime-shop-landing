@@ -32,9 +32,11 @@ Production: https://prime-shop.by (CRM — https://prime-shop.by/crm)
 
 ### Analytics
 
-Google Analytics 4 подключается через `NEXT_PUBLIC_GA_MEASUREMENT_ID`
-(см. `.env.example`). В Docker-сборке id задаётся build-arg / ENV
-(по умолчанию `G-4G6MMVBVD8`).
+Google Analytics 4 — `NEXT_PUBLIC_GA_MEASUREMENT_ID`  
+Яндекс.Метрика — `NEXT_PUBLIC_YM_ID`  
+
+См. `.env.example`. В Docker оба id задаются build-arg / ENV
+(по умолчанию `G-4G6MMVBVD8` и `110831809`).
 
 Локально:
 
@@ -43,7 +45,7 @@ cp .env.example .env.local
 npm run dev
 ```
 
-После деплоя проверьте **Reports → Realtime** в [Google Analytics](https://analytics.google.com).
+После деплоя: GA → Realtime; Метрика → «Онлайн».
 
 ### CI/CD secrets (Settings → Secrets → Actions)
 

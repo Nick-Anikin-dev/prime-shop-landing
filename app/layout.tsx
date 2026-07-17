@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { YandexMetrika } from "@/components/YandexMetrika";
 import "./globals.css";
 
 const inter = Inter({
@@ -11,6 +12,7 @@ const inter = Inter({
 });
 
 const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const ymCounterId = process.env.NEXT_PUBLIC_YM_ID;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://prime-shop.by"),
@@ -51,6 +53,7 @@ export default function RootLayout({
         {gaMeasurementId ? (
           <GoogleAnalytics measurementId={gaMeasurementId} />
         ) : null}
+        {ymCounterId ? <YandexMetrika counterId={ymCounterId} /> : null}
         {children}
       </body>
     </html>
