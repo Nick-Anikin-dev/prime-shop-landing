@@ -16,7 +16,7 @@ export function Cta() {
             <span className="glow gg2" aria-hidden />
             <h2>Начните бесплатно уже сегодня</h2>
             <p>
-              Попробуйте все возможности системы без ограничений в течение 14
+              Попробуйте все возможности системы без ограничений в течение 30
               дней
             </p>
             <Button href={CRM_SIGN_UP} variant="light" size="lg">
