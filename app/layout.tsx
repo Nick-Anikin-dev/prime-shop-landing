@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import "./globals.css";
 
 const inter = Inter({
@@ -8,6 +9,8 @@ const inter = Inter({
   variable: "--font-inter",
   display: "swap",
 });
+
+const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 export const metadata: Metadata = {
   title: "Prime Shop — готовый учёт для розницы",
@@ -37,6 +40,9 @@ export default function RootLayout({
   return (
     <html lang="ru" className={inter.variable}>
       <body style={{ fontFamily: "var(--font-inter), system-ui, sans-serif" }}>
+        {gaMeasurementId ? (
+          <GoogleAnalytics measurementId={gaMeasurementId} />
+        ) : null}
         {children}
       </body>
     </html>

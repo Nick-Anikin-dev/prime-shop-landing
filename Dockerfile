@@ -10,6 +10,11 @@ COPY package.json package-lock.json ./
 RUN npm ci
 
 COPY . .
+
+# Public GA4 id (embedded at build time for static export)
+ARG NEXT_PUBLIC_GA_MEASUREMENT_ID=G-4G6MMVBVD8
+ENV NEXT_PUBLIC_GA_MEASUREMENT_ID=$NEXT_PUBLIC_GA_MEASUREMENT_ID
+
 RUN npm run build
 
 ############################
