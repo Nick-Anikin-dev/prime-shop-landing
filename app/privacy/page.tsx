@@ -26,9 +26,6 @@ export default function PrivacyPage() {
         <li>УНП: {LEGAL.unp}</li>
         <li>Email: {LEGAL.email}</li>
         <li>Телефон: {LEGAL.phone}</li>
-        <li>
-          Юридический адрес предоставляется по запросу на {LEGAL.email}
-        </li>
       </ul>
 
       <h2>2. Какие данные мы обрабатываем</h2>
