@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CRM_SIGN_UP } from "@/lib/paths";
+import { LEGAL } from "@/lib/legal";
 
 /**
  * Long-form SEO copy for crawlers and informational queries.
@@ -128,9 +129,9 @@ export function SeoContent() {
         </p>
         <p>
           Перенести каталог можно из Excel. Поддержка — на{" "}
-          <a href="mailto:support@prime-shop.by">support@prime-shop.by</a> и по
-          телефону. Политика обработки данных и условия использования
-          опубликованы в{" "}
+          <a href={`mailto:${LEGAL.email}`}>{LEGAL.email}</a> и по{" "}
+          <a href={`tel:${LEGAL.phoneTel}`}>телефону</a>. Политика обработки
+          данных и условия использования опубликованы в{" "}
           <Link href="/privacy">политике конфиденциальности</Link> и{" "}
           <Link href="/offer">публичной оферте</Link>.
         </p>

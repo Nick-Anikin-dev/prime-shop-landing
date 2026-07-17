@@ -24,8 +24,12 @@ export default function PrivacyPage() {
       <ul>
         <li>Оператор: {LEGAL.operatorName}</li>
         <li>УНП: {LEGAL.unp}</li>
-        <li>Email: {LEGAL.email}</li>
-        <li>Телефон: {LEGAL.phone}</li>
+        <li>
+          Email: <a href={`mailto:${LEGAL.email}`}>{LEGAL.email}</a>
+        </li>
+        <li>
+          Телефон: <a href={`tel:${LEGAL.phoneTel}`}>{LEGAL.phone}</a>
+        </li>
       </ul>
 
       <h2>2. Какие данные мы обрабатываем</h2>
@@ -89,7 +93,8 @@ export default function PrivacyPage() {
       <h2>7. Ваши права</h2>
       <p>
         Вы можете запросить доступ, уточнение, ограничение обработки или
-        удаление персональных данных, направив обращение на {LEGAL.email}.
+        удаление персональных данных, направив обращение на{" "}
+        <a href={`mailto:${LEGAL.email}`}>{LEGAL.email}</a>.
       </p>
 
       <h2>8. Изменения</h2>

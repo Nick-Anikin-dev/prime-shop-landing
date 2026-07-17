@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { Send, Instagram, Youtube, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
+import { LEGAL } from "@/lib/legal";
 
 export function Footer() {
   return (
@@ -16,16 +17,7 @@ export function Footer() {
               эффективной работы вашего бизнеса.
             </p>
             <div className="footer-social">
-              {/* <a href="#" aria-label="Telegram">
-                <Send />
-              </a>
-              <a href="#" aria-label="Instagram">
-                <Instagram />
-              </a>
-              <a href="#" aria-label="YouTube">
-                <Youtube />
-              </a> */}
-              <a href="mailto:support@prime-shop.by" aria-label="Email">
+              <a href={`mailto:${LEGAL.email}`} aria-label="Email">
                 <Mail />
               </a>
             </div>
@@ -33,14 +25,18 @@ export function Footer() {
           <div className="footer-col">
             <h5>Контакты</h5>
             <ul>
-              <li>support@prime-shop.by</li>
-              <li>+375 (44) 743-41-81</li>
+              <li>
+                <a href={`mailto:${LEGAL.email}`}>{LEGAL.email}</a>
+              </li>
+              <li>
+                <a href={`tel:${LEGAL.phoneTel}`}>{LEGAL.phone}</a>
+              </li>
             </ul>
           </div>
           <div className="footer-col">
             <h5>Документы</h5>
-            <a href="/privacy">Политика конфиденциальности</a>
-            <a href="/offer">Публичная оферта</a>
+            <Link href="/privacy">Политика конфиденциальности</Link>
+            <Link href="/offer">Публичная оферта</Link>
           </div>
         </div>
         <div className="footer-bottom">
