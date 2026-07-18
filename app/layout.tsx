@@ -36,6 +36,9 @@ export const metadata: Metadata = {
     ],
     apple: [{ url: "/img/apple-touch-icon.png", sizes: "180x180" }],
   },
+  verification: {
+    yandex: "2243427449ef1835",
+  },
   openGraph: {
     title:
       "Prime Shop — программа учёта для магазина в Беларуси",
